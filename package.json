@@ -1,6 +1,6 @@
 {
     "name": "n8n-nodes-je-sics-adapter",
-    "version": "1.0.0",
+    "version": "1.0.2-beta.1",
     "description": "N8N node for SICS Flow Adapter with versioning support for different development teams",
     "packageManager": "pnpm@9.5.0",
     "main": "dist/index.js",
@@ -20,10 +20,7 @@
         "n8n-nodes",
         "n8n-community-nodes",
         "sics",
-        "flow-adapter",
-        "workflow",
-        "automation",
-        "integration",
+        "flow-team",
         "n8n-community-node-package"
     ],
     "author": "Development Team",
