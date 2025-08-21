@@ -1,0 +1,175 @@
+{
+    "baseUrl": "http://localhost:3001/api",
+    "apiVersion": "v1",
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "teams": [
+        {
+            "teamId": "test-team",
+            "teamName": "Test Team",
+            "supportedVersions": [
+                ">=1.0.0"
+            ],
+            "defaultVersion": "1.0.0",
+            "customActions": [
+                {
+                    "id": "test-action",
+                    "name": "Test Action",
+                    "description": "Simple test action for development",
+                    "version": "1.0.0",
+                    "team": "test-team",
+                    "category": "data_processing",
+                    "parameters": [
+                        {
+                            "name": "message",
+                            "displayName": "Test Message",
+                            "type": "string",
+                            "required": true,
+                            "description": "Message to process in test action"
+                        }
+                    ],
+                    "flowAdapterEndpoint": "/flow/test-action"
+                }
+            ],
+            "featureFlags": {
+                "enableAdvancedLogging": true,
+                "enableRetry": true
+            }
+        },
+        {
+            "teamId": "demo-team",
+            "teamName": "Demo Team",
+            "supportedVersions": [
+                ">=1.0.0",
+                ">=2.0.0"
+            ],
+            "defaultVersion": "1.0.0",
+            "customActions": [],
+            "featureFlags": {
+                "enableAdvancedLogging": false,
+                "enableRetry": true
+            }
+        }
+    ],
+    "globalActions": [
+        {
+            "id": "data-transform",
+            "name": "Data Transform",
+            "description": "Transform data using predefined rules",
+            "version": "1.0.0",
+            "team": "",
+            "category": "data_processing",
+            "parameters": [
+                {
+                    "name": "input",
+                    "displayName": "Input Data",
+                    "type": "json",
+                    "required": true,
+                    "description": "Data to be transformed"
+                },
+                {
+                    "name": "transformRules",
+                    "displayName": "Transform Rules",
+                    "type": "json",
+                    "required": true,
+                    "description": "Transformation rules to apply"
+                }
+            ],
+            "flowAdapterEndpoint": "/flow/data-transform"
+        },
+        {
+            "id": "data-validate",
+            "name": "Data Validate",
+            "description": "Validate data against schema",
+            "version": "1.0.0",
+            "team": "",
+            "category": "validation",
+            "parameters": [
+                {
+                    "name": "data",
+                    "displayName": "Data",
+                    "type": "json",
+                    "required": true,
+                    "description": "Data to validate"
+                },
+                {
+                    "name": "schema",
+                    "displayName": "Validation Schema",
+                    "type": "json",
+                    "required": true,
+                    "description": "JSON schema for validation"
+                }
+            ],
+            "flowAdapterEndpoint": "/flow/data-validate"
+        },
+        {
+            "id": "send-notification",
+            "name": "Send Notification",
+            "description": "Send notification via multiple channels",
+            "version": "1.0.0",
+            "team": "",
+            "category": "notification",
+            "parameters": [
+                {
+                    "name": "message",
+                    "displayName": "Message",
+                    "type": "string",
+                    "required": true,
+                    "description": "Notification message"
+                },
+                {
+                    "name": "channels",
+                    "displayName": "Channels",
+                    "type": "options",
+                    "required": true,
+                    "description": "Notification channels",
+                    "options": [
+                        {
+                            "name": "Email",
+                            "value": "email"
+                        },
+                        {
+                            "name": "Slack",
+                            "value": "slack"
+                        },
+                        {
+                            "name": "Teams",
+                            "value": "teams"
+                        },
+                        {
+                            "name": "SMS",
+                            "value": "sms"
+                        }
+                    ]
+                },
+                {
+                    "name": "priority",
+                    "displayName": "Priority",
+                    "type": "options",
+                    "required": false,
+                    "description": "Notification priority",
+                    "default": "normal",
+                    "options": [
+                        {
+                            "name": "Low",
+                            "value": "low"
+                        },
+                        {
+                            "name": "Normal",
+                            "value": "normal"
+                        },
+                        {
+                            "name": "High",
+                            "value": "high"
+                        },
+                        {
+                            "name": "Critical",
+                            "value": "critical"
+                        }
+                    ]
+                }
+            ],
+            "flowAdapterEndpoint": "/flow/send-notification"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "n8n-sics-testing",
+    "version": "1.0.0",
+    "description": "Testing environment for SICS Adapter in N8N",
+    "main": "index.js",
+    "scripts": {
+        "start": "n8n start",
+        "dev": "n8n start --tunnel"
+    },
+    "dependencies": {
+        "n8n": "^1.97.0",
+        "n8n-nodes-je-sics-adapter": "file:../n8n-nodes-je-sics-adapter-1.0.0.tgz"
+    }
+}
