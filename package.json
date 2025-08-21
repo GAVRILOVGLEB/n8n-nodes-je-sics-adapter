@@ -16,7 +16,13 @@
         "quick-test": "pnpm run build && node quick-test.js"
     },
     "keywords": [
-        "n8n-community-node-package"
+        "n8n-community-node-package",
+        "n8n",
+        "n8n-nodes",
+        "sics",
+        "flow-adapter",
+        "workflow",
+        "automation"
     ],
     "author": "Development Team",
     "license": "MIT",
