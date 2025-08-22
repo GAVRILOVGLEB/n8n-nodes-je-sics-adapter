@@ -24,7 +24,7 @@ if (-not (Test-Path "node_modules")) {
 
 # Install our package
 Write-Host "📦 Installing SICS Adapter..." -ForegroundColor Yellow
-npm install ../n8n-nodes-je-sics-adapter-1.0.2-beta.2.tgz
+npm install ../n8n-nodes-je-sics-adapter-1.0.2-beta.3.tgz
 
 # Setup environment variables
 $env:SICS_BASE_URL = "http://localhost:3001/api"

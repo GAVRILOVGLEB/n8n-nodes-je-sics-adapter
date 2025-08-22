@@ -9,6 +9,8 @@
     },
     "dependencies": {
         "n8n": "^1.97.0",
-        "n8n-nodes-je-sics-adapter": "file:../n8n-nodes-je-sics-adapter-1.0.2-beta.2.tgz"
+        "n8n-nodes-gg-hello-world": "^1.0.0",
+        "n8n-nodes-hello-world": "^0.1.6",
+        "n8n-nodes-je-sics-adapter": "file:../n8n-nodes-je-sics-adapter-1.0.31.tgz"
     }
 }

@@ -31,7 +31,7 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
-Write-Host "✅ Package successfully created: n8n-nodes-je-sics-adapter-1.0.2-beta.2.tgz" -ForegroundColor Green
+Write-Host "✅ Package successfully created: n8n-nodes-je-sics-adapter-1.0.2-beta.3.tgz" -ForegroundColor Green
 Write-Host ""
 Write-Host "📝 Next steps:" -ForegroundColor Cyan
 Write-Host "1. For local testing: ./setup-testing.ps1" -ForegroundColor White
